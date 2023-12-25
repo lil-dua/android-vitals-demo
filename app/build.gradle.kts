@@ -55,6 +55,5 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     implementation("com.google.android.play:core:1.10.0")
-    implementation("androidx.metrics:metrics-performance:1.0.0-alpha04")
 
 }

@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_slowRenderFragment"
             app:destination="@id/slowRenderFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_permissionFragment"
+            app:destination="@id/permissionFragment" />
     </fragment>
     <fragment
         android:id="@+id/anrsFragment"
@@ -26,28 +29,51 @@
         android:label="fragment_anrs"
         tools:layout="@layout/fragment_anrs" />
     <fragment
-        android:id="@+id/crashesFragment"
-        android:name="com.advanced.androidvitalsdemo.ui.crashes.CrashesFragment"
-        android:label="fragment_crashes"
-        tools:layout="@layout/fragment_crashes" />
-    <fragment
         android:id="@+id/slowRenderFragment"
         android:name="com.advanced.androidvitalsdemo.ui.slowrender.SlowRenderFragment"
         android:label="fragment_slow_render"
         tools:layout="@layout/fragment_slow_render" >
         <action
-            android:id="@+id/action_slowRenderFragment_to_dataBindingFragment"
-            app:destination="@id/dataBindingFragment" />
+            android:id="@+id/action_slowRenderFragment_to_noConstraintFragment"
+            app:destination="@id/noConstraintFragment" />
         <action
-            android:id="@+id/action_slowRenderFragment_to_nestedLayoutFragment"
-            app:destination="@id/nestedLayoutFragment" />
+            android:id="@+id/action_slowRenderFragment_to_bindingNoConstraintFragment"
+            app:destination="@id/bindingNoConstraintFragment" />
+        <action
+            android:id="@+id/action_slowRenderFragment_to_useConstraintFragment"
+            app:destination="@id/useConstraintFragment" />
+        <action
+            android:id="@+id/action_slowRenderFragment_to_bindingConstraintFragment"
+            app:destination="@id/bindingConstraintFragment" />
     </fragment>
     <fragment
-        android:id="@+id/dataBindingFragment"
-        android:name="com.advanced.androidvitalsdemo.ui.slowrender.databinding.DataBindingFragment"
-        android:label="DataBindingFragment" />
+        android:id="@+id/crashesFragment"
+        android:name="com.advanced.androidvitalsdemo.ui.crashes.CrashesFragment"
+        android:label="fragment_crashes"
+        tools:layout="@layout/fragment_crashes" />
     <fragment
-        android:id="@+id/nestedLayoutFragment"
-        android:name="com.advanced.androidvitalsdemo.ui.slowrender.nestedlayout.NestedLayoutFragment"
-        android:label="NestedLayoutFragment" />
+        android:id="@+id/permissionFragment"
+        android:name="com.advanced.androidvitalsdemo.ui.permission.PermissionFragment"
+        android:label="fragment_permission"
+        tools:layout="@layout/fragment_permission" />
+    <fragment
+        android:id="@+id/bindingConstraintFragment"
+        android:name="com.advanced.androidvitalsdemo.ui.slowrender.bindingconstraint.BindingConstraintFragment"
+        android:label="fragment_binding_constraint"
+        tools:layout="@layout/fragment_binding_constraint" />
+    <fragment
+        android:id="@+id/noConstraintFragment"
+        android:name="com.advanced.androidvitalsdemo.ui.slowrender.defaut.NoConstraintFragment"
+        android:label="fragment_no_constraint"
+        tools:layout="@layout/fragment_no_constraint" />
+    <fragment
+        android:id="@+id/bindingNoConstraintFragment"
+        android:name="com.advanced.androidvitalsdemo.ui.slowrender.bindingnoconstraint.BindingNoConstraintFragment"
+        android:label="fragment_binding_no_constraint"
+        tools:layout="@layout/fragment_binding_no_constraint" />
+    <fragment
+        android:id="@+id/useConstraintFragment"
+        android:name="com.advanced.androidvitalsdemo.ui.slowrender.constraint.UseConstraintFragment"
+        android:label="fragment_use_constraint"
+        tools:layout="@layout/fragment_use_constraint" />
 </navigation>

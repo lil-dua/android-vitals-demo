@@ -38,76 +38,164 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <TextView
+        android:id="@+id/text_title_not_constraint"
+        android:text="Not Use ConstraintLayout:"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_title"
+        app:layout_constraintStart_toStartOf="parent"/>
+
     <Button
-        android:id="@+id/btn_null_pointer"
-        android:text="D"
-        android:layout_marginTop="50dp"
+        android:id="@+id/btn_default_render"
+        android:text="Default Render"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/red"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/text_title"/>
-
-    <Button
-        android:id="@+id/btn_data_binding"
-        android:text="With Data Binding"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btn_null_pointer"/>
-
-    <Button
-        android:id="@+id/btn_out_memory"
-        android:text="Data Binding Crashes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btn_data_binding"/>
-
-    <Button
-        android:id="@+id/btn_network"
-        android:text="NetworkOnMainThread Crashes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btn_out_memory"/>
-
-    <Button
-        android:id="@+id/btn_runtime"
-        android:text="AndroidRuntime Crashes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btn_network"/>
-
-
-    <EditText
-        android:id="@+id/text_edit_name"
-        android:hint="Enter your name.. "
-        android:textSize="35sp"
+        android:layout_height="70dp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginTop="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btn_runtime"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:layout_width="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title_not_constraint"/>
 
     <TextView
-        android:id="@+id/text_title_data"
-        android:text="Data loaded: "
-        android:textSize="35sp"
+        android:id="@+id/text_time_not_constraint"
+        android:text="Draw Time:"
+        android:textSize="17sp"
         android:textStyle="bold"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/text_edit_name"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintTop_toTopOf="@id/btn_default_render"
+        app:layout_constraintStart_toEndOf="@id/btn_default_render"/>
 
     <TextView
-        android:id="@+id/text_data"
+        android:id="@+id/text_data_not_constraint"
         android:text="0"
-        android:textSize="35sp"
+        android:textSize="19sp"
         android:textStyle="bold"
-        android:layout_marginTop="30dp"
+        android:textColor="@color/red"
+        android:layout_marginStart="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/text_edit_name"
-        app:layout_constraintStart_toEndOf="@id/text_title_data"/>
+        app:layout_constraintTop_toBottomOf="@id/text_time_not_constraint"
+        app:layout_constraintStart_toEndOf="@id/btn_default_render"/>
 
+    <Button
+        android:id="@+id/btn_data_binding_render"
+        android:text="Data Binding Render"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_default_render"/>
+
+    <TextView
+        android:id="@+id/text_time_binding_not_constraint"
+        android:text="Draw Time:"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/btn_data_binding_render"
+        app:layout_constraintStart_toEndOf="@id/btn_data_binding_render"/>
+
+    <TextView
+        android:id="@+id/text_data_binding_not_constraint"
+        android:text="0"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_time_binding_not_constraint"
+        app:layout_constraintStart_toEndOf="@id/btn_data_binding_render"/>
+
+    <TextView
+        android:id="@+id/text_title_constraint"
+        android:text="Use ConstraintLayout:"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_data_binding_render"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_use_constraint"
+        android:text="Use ConstraintLayout"
+        android:layout_marginTop="20dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title_constraint"/>
+
+    <TextView
+        android:id="@+id/text_time_constraint"
+        android:text="Draw Time:"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/btn_use_constraint"
+        app:layout_constraintStart_toEndOf="@id/btn_use_constraint"/>
+
+    <TextView
+        android:id="@+id/text_data_constraint"
+        android:text="0"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_time_constraint"
+        app:layout_constraintStart_toEndOf="@id/btn_use_constraint"/>
+
+    <Button
+        android:id="@+id/btn_data_binding_constraint"
+        android:text="Data Binding With ConstraintLayout"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_use_constraint"/>
+
+    <TextView
+        android:id="@+id/text_time_binding_constraint"
+        android:text="Draw Time:"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/btn_data_binding_constraint"
+        app:layout_constraintStart_toEndOf="@id/btn_data_binding_constraint"/>
+
+    <TextView
+        android:id="@+id/text_data_binding_constraint"
+        android:text="0"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_time_binding_constraint"
+        app:layout_constraintStart_toEndOf="@id/btn_data_binding_constraint"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
