@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.advanced.androidvitalsdemo.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_anrsFragment"
+            app:destination="@id/anrsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_crashesFragment"
+            app:destination="@id/crashesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_slowRenderFragment"
+            app:destination="@id/slowRenderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anrsFragment"
+        android:name="com.advanced.androidvitalsdemo.ui.anrs.AnrsFragment"
+        android:label="fragment_anrs"
+        tools:layout="@layout/fragment_anrs" />
+    <fragment
+        android:id="@+id/crashesFragment"
+        android:name="com.advanced.androidvitalsdemo.ui.crashes.CrashesFragment"
+        android:label="fragment_crashes"
+        tools:layout="@layout/fragment_crashes" />
+    <fragment
+        android:id="@+id/slowRenderFragment"
+        android:name="com.advanced.androidvitalsdemo.ui.slowrender.SlowRenderFragment"
+        android:label="fragment_slow_render"
+        tools:layout="@layout/fragment_slow_render" >
+        <action
+            android:id="@+id/action_slowRenderFragment_to_dataBindingFragment"
+            app:destination="@id/dataBindingFragment" />
+        <action
+            android:id="@+id/action_slowRenderFragment_to_nestedLayoutFragment"
+            app:destination="@id/nestedLayoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataBindingFragment"
+        android:name="com.advanced.androidvitalsdemo.ui.slowrender.databinding.DataBindingFragment"
+        android:label="DataBindingFragment" />
+    <fragment
+        android:id="@+id/nestedLayoutFragment"
+        android:name="com.advanced.androidvitalsdemo.ui.slowrender.nestedlayout.NestedLayoutFragment"
+        android:label="NestedLayoutFragment" />
+</navigation>
